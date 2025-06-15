@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!-- Logo -->
+        <div class="logo">
+            <img id="img-logo" src="./assets/icons/ref.png" alt="">
+        </div>
+        <!-- Menu principal -->
+        <nav class="menu-principal">
+            <!-- Dropdown personalizado -->
+            <div class="dropdown-personalizado">
+                <img src="./assets/icons/controle 1.png" class="icone-dropdown-esquerda" alt="">
+                <div class="dropdown-selecionado" tabindex="0">
+                    <span class="dropdown-texto">CATEGORIAS</span>
+                </div>
+                <img src="./assets/icons/seta.png" class="icone-dropdown-direita" alt="">
+                <ul class="lista-dropdown">
+                    <li data-value="fps"><a href="#">FPS</a></li>
+                    <li data-value="terror"><a href="#">TERROR</a></li>
+                    <li data-value="futebol"><a href="#">FUTEBOL</a></li>
+                    <li data-value="carro"><a href="#">CARRO</a></li>
+                    <li data-value="bike"><a href="#">BIKE</a></li>
+                    <li data-value="2jogadores"><a href="#">2 JOGADORES</a></li>
+                </ul>
+            </div>
+            <!-- Itens do menu -->
+            <div class="item-menu">
+                <img class="icone-destaque" src="./assets/icons/trofeu 1.png" alt="">
+                <a href="#">Destaques</a>
+            </div>
+            <div class="item-menu">
+                <img class="icone-destaque" src="./assets/icons/2palyer 1.png" alt="">
+                <a href="#">2 Jogadores</a>
+            </div>
+        </nav>
+
+    </header>
+    <script src="scripts/dropdown.js"></script>
+
+
+    <div class="card-jogo" onclick="abrirJogo()">
+        <img src="./assets/games/image1.jpg" alt="Capa do Jogo">
+        <span class="titulo-jogo">Obby Survive Parkour</span>
+    </div>
+</body>
+
+</html>

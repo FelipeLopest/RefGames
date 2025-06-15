@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Obby Survive Parkour</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="container-iframe">
+        <button id="btn-full">Tela Cheia</button>
+        <iframe id="game-frame"
+            src="https://html5.gamedistribution.com/9423ba1c5c0847998ae6bbae78ba4c91/?gd_sdk_referrer_url=https://gamedistribution.com/games/obby-survive-parkour/"
+            allowfullscreen width="100%" height="600" frameborder="0"></iframe>
+
+        <div id="aviso" style="
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    z-index: 9999;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+">
+            🔁 Clique no jogo para ativar os controles
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const iframe = document.getElementById('game-frame');
+                const aviso = document.getElementById('aviso');
+                const btnFull = document.getElementById('btn-full');
+
+                btnFull.addEventListener('click', () => {
+                    if (iframe.requestFullscreen) {
+                        iframe.requestFullscreen();
+                    } else if (iframe.webkitRequestFullscreen) {
+                        iframe.webkitRequestFullscreen();
+                    } else if (iframe.mozRequestFullScreen) {
+                        iframe.mozRequestFullScreen();
+                    } else {
+                        alert("Seu navegador não suporta tela cheia.");
+                    }
+
+                    // Mostrar aviso visível
+                    aviso.style.display = "block";
+
+                    // Esconder aviso após 3 segundos
+                    setTimeout(() => {
+                        aviso.style.display = "none";
+                    }, 3000);
+                });
+            });
+        </script>
+
+    </div>
+</body>
+
+</html>
