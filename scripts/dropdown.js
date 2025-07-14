@@ -39,6 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-function abrirJogo() {
-    window.location.href = "pagina-jogo.html"; // Abre na mesma aba
+function abrirJogo(pagina) {
+    window.location.href = pagina;
 }
